@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-public class test {
+public class SampleTest {
 	
 	@Test
 	public void testFile(){
@@ -19,7 +19,7 @@ public class test {
 		//生成新文件名
 		//UUID.randomUUID();
 		 String newName = oldName.substring(0,oldName.lastIndexOf("."))+"("+date+")"+oldName.substring(oldName.lastIndexOf("."));
-	System.out.println(newName);
+		System.out.println(newName);
 	}
 	
 	@Test
@@ -33,7 +33,7 @@ public class test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationContext-*.xml");
 		CustomService customService = (CustomService)context.getBean("customServiceImpl");
 		Custom custom = new Custom();
-		custom.setCustomId("1253");
+		custom.setCustomId("1255");
 		custom.setCustomName("aaa");
 		customService.insert(custom);
 	}
